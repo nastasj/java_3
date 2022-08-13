@@ -25,6 +25,9 @@ public class Category {
         this.name = name;
     }
 
+    public Category() {
+    }
+
     public Category(Integer id, String name) {
         this.id = id;
         this.name = name;
