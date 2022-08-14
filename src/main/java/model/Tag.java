@@ -1,7 +1,4 @@
 package model;
-
-import java.util.Objects;
-
 public class Tag {
 
     private Integer id;

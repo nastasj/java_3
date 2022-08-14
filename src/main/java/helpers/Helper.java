@@ -4,7 +4,6 @@ import model.Category;
 import model.Pet;
 import model.Status;
 import model.Tag;
-
 import java.util.ArrayList;
 import java.util.Random;
 

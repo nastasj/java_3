@@ -1,25 +1,12 @@
 package api;
 
-import io.restassured.RestAssured;
-import io.restassured.config.Config;
-import io.restassured.parsing.Parser;
-import io.restassured.path.json.JsonPath;
+
 import io.restassured.response.Response;
-import com.google.gson.Gson;
-
-import io.restassured.config.Config;
-
 import java.io.*;
 import java.util.Properties;
-import com.typesafe.config.ConfigFactory;
-import model.Pet;
-import org.apache.http.HttpStatus;
-
-import static helpers.Helper.generatePostPet;
-import static io.restassured.RestAssured.basePath;
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
-import static org.testng.Assert.assertEquals;
+
 
 public class ApiPetStore {
 

@@ -1,7 +1,4 @@
 package model;
-
-import java.util.Objects;
-
 public class Category {
 
     private Integer id;

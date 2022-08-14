@@ -21,6 +21,14 @@ public class TestsPetCRUD {
 //        assertEquals(createPetResponse.as(Pet.class), pet);
         assertEquals(HttpStatus.SC_OK, 200);
         assertEquals(getPetResponse.getInt("id"), createdPet.getId());
+        assertEquals(createdPetResponse.getInt("id"), createdPet.getId());
+        assertEquals(createdPetResponse.getInt("category.id"), createdPet.getCategory().getId());
+        assertEquals(createdPetResponse.getString("category.name"), createdPet.getCategory().getName());
+        assertEquals(createdPetResponse.getString("name"), createdPet.getName());
+        assertEquals(createdPetResponse.getString("photoUrls[0]"), createdPet.getPhotoUrls().get(0));
+        assertEquals(createdPetResponse.getInt("tags[0].id"), createdPet.getTags().get(0).getId());
+        assertEquals(createdPetResponse.getString("tags[0].name"), createdPet.getTags().get(0).getName());
+        assertEquals(createdPetResponse.getString("status"), createdPet.getStatus().toString());
     }
 
     @Test
@@ -31,6 +39,13 @@ public class TestsPetCRUD {
 //        Assert.assertTrue(createPetResponse.as(Pet.class).equals(createdPet));
         assertEquals(HttpStatus.SC_OK, 200);
         assertEquals(createdPetResponse.getInt("id"), createdPet.getId());
+        assertEquals(createdPetResponse.getInt("category.id"), createdPet.getCategory().getId());
+        assertEquals(createdPetResponse.getString("category.name"), createdPet.getCategory().getName());
+        assertEquals(createdPetResponse.getString("name"), createdPet.getName());
+        assertEquals(createdPetResponse.getString("photoUrls[0]"), createdPet.getPhotoUrls().get(0));
+        assertEquals(createdPetResponse.getInt("tags[0].id"), createdPet.getTags().get(0).getId());
+        assertEquals(createdPetResponse.getString("tags[0].name"), createdPet.getTags().get(0).getName());
+        assertEquals(createdPetResponse.getString("status"), createdPet.getStatus().toString());
     }
     @Test
     public void testUpdatePet() {
@@ -45,6 +60,13 @@ public class TestsPetCRUD {
 //        assertEquals(createPetResponse.as(Pet.class), pet);
         assertEquals(HttpStatus.SC_OK, 200);
         assertEquals(updatedPetResponse.getInt("id"), updatedPet.getId());
+        assertEquals(createdPetResponse.getInt("category.id"), createdPet.getCategory().getId());
+        assertEquals(createdPetResponse.getString("category.name"), createdPet.getCategory().getName());
+        assertEquals(createdPetResponse.getString("name"), createdPet.getName());
+        assertEquals(createdPetResponse.getString("photoUrls[0]"), createdPet.getPhotoUrls().get(0));
+        assertEquals(createdPetResponse.getInt("tags[0].id"), createdPet.getTags().get(0).getId());
+        assertEquals(createdPetResponse.getString("tags[0].name"), createdPet.getTags().get(0).getName());
+        assertEquals(createdPetResponse.getString("status"), createdPet.getStatus().toString());
     }
 
     @Test
